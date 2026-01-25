@@ -1,0 +1,29 @@
+{ "name": "stro-seedling-2601-pmb",
+  "version": "0.0.0",
+  "description": "My self-assembling base camp for new Ubuntu VPSs.",
+  "keywords": [],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/stro-seedling-2601-pmb/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/stro-seedling-2601-pmb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/stro-seedling-2601-pmb/issues"
+  },
+  "contributors": [],
+
+  "private": true, "license": "ISC",
+
+  "scripts": { "test": "echo E: 'No tests yet!'; exit 2" },
+  "directories": { "test": "test" },
+  "eslintConfig": { "extends": "nodejs-pmb" },
+
+  "dependencies": {},
+  "devDependencies": {
+  },
+
+
+  "engines": { "npm": ">=7.0.0", "node": ">=24.0.0" }
+}
