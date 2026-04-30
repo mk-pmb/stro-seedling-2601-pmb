@@ -1,0 +1,40 @@
+%YAML 1.1
+# ^-- ATTN: [2019-12-31] If you use a later version, Github will fail
+#     with a bogus error message "You have an error in your yaml syntax".
+# -*- coding: UTF-8, tab-width: 2 -*-
+---
+
+name: '☂ CI tests'
+
+on:
+  push:
+    branches:
+      - '*'
+  workflow_dispatch:
+
+jobs:
+  job_npm_test:
+    runs-on: ubuntu-latest
+    env:
+      INSTALL_CMD: >
+        curl --fail --silent --show-error
+        '${{ github.event.repository.homepage }}sprout.sh' | bash
+      SPROUT_BRANCH: '${{ github.ref_name }}'
+
+    steps:
+      - uses: mk-pmb/github-ci-util-2405-pmb/act/install@v1
+        with:
+          nodejs_version: ${{ matrix.node-version }}
+
+      - name: 'Configure basics'
+        run: |
+          git config --global init.defaultBranch this_should_not_matter
+
+      - run: 'ghciu eval "$INSTALL_CMD"'
+      - run: 'cd && ls -l . bin lib'
+
+
+
+
+
+...
