@@ -10,6 +10,17 @@ My self-assembling base camp for new Ubuntu VPSs.
 
 
 
+Setup
+-----
+
+```bash
+$ curl --fail --silent --show-error \
+  https://mk-pmb.github.io/stro-seedling-2601-pmb/sprout.sh | bash
+```
+
+… or download and run [`sprout.sh`](sprout.sh).
+
+
 Known issues
 ------------
 
